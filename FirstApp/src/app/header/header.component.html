@@ -1,0 +1,16 @@
+<form  #BasicForm="ngForm" (ngSubmit)="GetValue(BasicForm.value)">
+    <input type="text" ngModel name="Fname" placeholder="Enter First Name"><br/><br/><br/>
+    <input type="text" ngModel name="Email" placeholder="Enter Email Id"><br/><br/><br/>
+    <input type="text" ngModel name="Phone" placeholder="Enter Phone Number"><br/><br/><br/>
+
+    <input type ="submit" name="Submit">
+
+</form>
+<ul>
+<li>
+{{UserData.Fname}}
+{{UserData.Email}}
+{{UserData.Phone}}
+</li>
+
+</ul>

@@ -1,0 +1,52 @@
+<H2> This is My {{title}} Angular App</H2>
+
+<!--If else Condtion-->
+<ng-template [ngIf]="color=='Red'">
+<h1 style="color: red;">else Condition</h1>
+</ng-template>
+
+<ng-template [ngIf]="color=='Green'">
+  <h1 style="color: green;">else Condition</h1>
+  </ng-template>
+
+<!--Switch Condtion-->
+  <div [ngSwitch]="color">
+
+    <h1 *ngSwitchCase="'Red'" style="color: red;">This is Red Color</h1>
+    <h1 *ngSwitchCase="'Green'" style="color: green;">This is Red Color</h1>
+    <h1 *ngSwitchDefault  >This is Unknown Color</h1>
+    </div>
+
+    <!--For Loop Condtion-->
+    <div>
+<h1 *ngFor="let value of users" style="color: blue;">Name is : {{value}}</h1>
+
+    </div>
+
+    <!--Object of Array-->
+    <div>
+<h1 *ngFor="let Values of Details" style="color:Yellow">{{Values.Name}} --- {{Values.Email}}  --- {{Values.Pin}}</h1>
+
+    </div>
+
+        <!--Nestted For Loop  of Array-->
+        <div>
+          <ul *ngFor="let value of Details" style="color: cyan;">
+
+            <li>{{value.Name}}</li>
+            <li>{{value.Email}}</li>
+            <li>{{value.Pin}}</li>
+           <ul *ngFor="let ans of value.Socail" style="color: aquamarine;">
+            <li>{{ans}}</li>
+           </ul>
+          </ul>
+
+        </div>
+
+        <!--Style Binding-->
+
+        <div>
+          <h1  [style.color]="paint" [style.backgroundColor]="bgcolor">Chnage Color</h1>
+<button (click)="ChangeColor()">Change Color</button>
+
+        </div>>
